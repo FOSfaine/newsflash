@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <link rel="stylesheet" href="/assets/style.css">
+        {{!-- Google Font --}}
+    <link href="https://fonts.googleapis.com/css?family=Dhurjati|Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+        <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>News Flash</title>
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-wrapper brown">
+        <a href="/" class="brand-logo center">From Main: News Scraper!</a>
+        <ul class="left" id="nav-mobile">
+          <li><a href="/savedArticle">Saved Articles</a></li>
+        </ul>
+        <ul class="right" id="nav-mobile">
+          <li><a href="/scrape">Scrape</a></li>
+          <li><a href="/deleted">Show Deleted Articles</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <main>
+      <div class="container">
+        {{{ body }}}
+      </div>
+    </main>
+
+    <footer class="page-footer brown">
+      <div class="footer-copyright brown">
+        <div class="container">
+          All articles belong to <a href="http://www.echojs.com/"target="_blank">Echo JS.com</a>
+          <a class="grey-text right" href="/articles-json">Article JSON</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </body>
+<html>
