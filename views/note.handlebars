@@ -1,14 +1,7 @@
-<div class="row"> 
-  <h3 class="card articleTitle">{{article.title}}</h3>
-  <h5 class="card-panel articleBody">{{body}}</h5>
-  
-</div>
-
-
 <div class="row">
   <div class="col s2"></div>
-   <form action="/comment/{{article._id}}" method="POST" class="card-panel col s8 commenting">
-    <p id="commentHeading">Leave a note about this Article:</p>
+   <form action="/note/{{article._id}}" method="POST" class="card-panel col s8 notes">
+    <p id="noteHeading">Leave a note about this Article:</p>
       <div class="row">
         <div class="input-field">
           <input id="icon_prefix" type="text" placeholder="Name" name="name" class="validate active formfields formInput">
@@ -17,16 +10,15 @@
           <input id="icon_telephone" type="text" placeholder="Note" name="note" class="validate active formfields formInput">
         </div>
       </div>
-       <!-- Submit Button -->
+      
       <div class="row">
         <div class="input-field">
-        <center><input class="btn add-comment-button brown lighten-1" type="submit" value="Submit"></center>
+        <center><input class="btn add-note-button orange lighten-1" type="submit" value="Submit"></center>
         </div>
       </div>
     </form>
 </div>
 
-{{!-- comments go here --}}
 <div class="row">
   <div class="col s2"></div>
     <div class="col s8">
@@ -35,19 +27,15 @@
           {{#each article.note}}
             <div class="card">
               <p id="nameNote">{{name}}
-                
                 <form action="/deleteNote/{{this._id}}" method="POST">
-
-                  <button class="glyphicon glyphicon-remove right red" id="deletebutt"></button>
-                  
+                  <button class="glyphicon glyphicon-remove right brownb" id="deletebutt"></button>
                 </form>
-
               </p>
               <p id= "note">{{body}}<p>
             </div>
           {{/each}}
           {{else}}
-          <p>No Notes Yet.</p>
+          <p>No Existing Notes.</p>
         {{/if}}
     </div>
 </div>

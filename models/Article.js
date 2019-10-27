@@ -21,7 +21,7 @@ var ArticleSchema = new Schema({
     required: true,
     default: false
   },
-  comment: [{
+  note: [{
     type: Schema.Types.ObjectId,
     ref: "Note"
   }]
@@ -29,5 +29,4 @@ var ArticleSchema = new Schema({
 
 var Article = mongoose.model("Article", ArticleSchema);
 
-//export model
 module.exports = Article;
